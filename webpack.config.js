@@ -1,9 +1,10 @@
 const webpack = require('webpack');
 const path = require('path');
-const bundlePath = path.join(__dirname, "/dist");
+
+const bundlePath = path.join(__dirname, '/dist');
 
 module.exports = {
-  entry: path.join(__dirname, '/client/index.js'),
+  entry: path.join(__dirname, '/client/index.jsx'),
   module: {
     rules: [
       {
@@ -16,12 +17,13 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [ 'style-loader', 'css-loader' ]
+        use: ['style-loader', 'css-loader']
       }
     ]
   },
   output: {
     path: bundlePath,
-    filename: "bundle.js",
+    filename: 'bundle.js',
   }
+  // resolve: { extensions: ['.js', '.jsx'] } // can't get this to work!
 };
