@@ -6,6 +6,8 @@
     },
     "extends": "airbnb",
     "rules": {
-    	
+    	"react/prop-types": 0,
+    	"no-console": 0,
+    	"click-events-have-key-events": 0
     }
 }

@@ -3,12 +3,12 @@ import UserInfoBox from './UserInfoBox.jsx';
 import ReviewDetailsBox from './ReviewDetailsBox.jsx';
 import ReviewInteractor from './ReviewInteractor.jsx';
 
-const ReviewRow = props => (
+const ReviewRow = ({review}) => (
   <div className="review-row">
-    <UserInfoBox review={props.review} />
+    <UserInfoBox review={review} />
     <div className="right-side-container">
-      <ReviewDetailsBox review={props.review} />
-      <ReviewInteractor />
+      <ReviewDetailsBox review={review} />
+      <ReviewInteractor review={review} />
     </div>
   </div>
 );

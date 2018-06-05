@@ -1,0 +1,33 @@
+.review-row {
+	border: 3px solid black;
+	display: flex;
+}
+
+.user-info-box {
+	border: 3px solid orange;
+}
+
+.review-interactor {
+	border: 3px solid green;
+}
+
+.right-side-container {
+	border: 3px solid blue;
+}
+
+.review-details-box {
+	border: 3px solid purple;
+}
+
+.nickname-container {
+  clear: none;
+  margin-bottom: 20px;
+}
+
+.nickname {
+	color: #938454;
+	font-weight: 600;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 2px;
+}

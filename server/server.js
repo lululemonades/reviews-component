@@ -7,7 +7,7 @@ const db = require('../database/db.js');
 
 const app = express();
 app.use('/', express.static(path.join(__dirname, '../public')));
-app.use('/', express.static('./dist'));
+app.use('/', express.static(path.join(__dirname, '../dist')));
 app.use(bodyParser.json());
 
 app.get('/reviews/:productId/', (req, res) => {
@@ -16,5 +16,5 @@ app.get('/reviews/:productId/', (req, res) => {
   });
 });
 
-app.listen(3000, () => console.log('Listening on port 3000....'));
+app.listen(3000, () => console.log('Listening on port 3000...'));
 
