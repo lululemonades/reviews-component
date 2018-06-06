@@ -27,7 +27,7 @@ CREATE TABLE reviews (
 	details varchar(500) NOT NULL,
 	fit varchar(50) NOT NULL,
 	rating int NOT NULL,
-	what_you_like varchar (25),
+	what_you_like varchar(25),
 	what_you_didnt_like varchar(25),
 	voted_helpful int DEFAULT 0,
 	voted_not_helpful int DEFAULT 0,

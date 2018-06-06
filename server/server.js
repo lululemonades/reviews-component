@@ -16,5 +16,12 @@ app.get('/reviews/:productId/', (req, res) => {
   });
 });
 
+app.put('/reviews', (req, res) => {
+  const { reviewId, field, value } = req.body;
+  db.updateReview(reviewId, field, value, (_) => {
+    res.status(204).end();
+  });
+});
+
 app.listen(3000, () => console.log('Listening on port 3000...'));
 

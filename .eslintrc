@@ -8,6 +8,7 @@
     "rules": {
     	"react/prop-types": 0,
     	"no-console": 0,
-    	"click-events-have-key-events": 0
+    	"click-events-have-key-events": 0,
+        "func-names": ["error", "as-needed"]
     }
 }

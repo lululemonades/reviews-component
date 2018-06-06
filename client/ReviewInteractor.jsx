@@ -8,22 +8,22 @@ class ReviewInteractor extends React.Component {
       votedHelpful: this.props.review.votedHelpful,
       votedNotHelpful: this.props.review.votedNotHelpful,
       inappropriate: this.props.review.inappropriate,
+      id: this.props.review.reviewId,
     };
     this.updateReview = this.updateReview.bind(this);
   }
   updateReview(e) {
     const { className } = e.target;
-    this.setState(prevState => (
-      { [className]: prevState[className] + 1 }
-    ));
     axios.put('/reviews', {
-      params: {
-        field: className,
-        value: this.state[className],
-      },
+      reviewId: this.state.id,
+      field: className,
+      value: this.state[className] + 1,
     })
       .then(() => {
         console.log('You’ve successfully left feedback on this review!');
+        this.setState(prevState => (
+          { [className]: prevState[className] + 1 }
+        ));
       });
   }
   render() {
