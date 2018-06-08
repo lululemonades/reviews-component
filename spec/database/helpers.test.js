@@ -1,9 +1,13 @@
 const h = require('../../database/helpers.js');
 
-test('adds 1 + 2 to equal 3', () => {
-  expect(h.snakeToCamel('hello_world_im_here')).toBe('helloWorldImHere');
+describe('Test the case converions', () => {
+  test('adds 1 + 2 to equal 3', (done) => {
+    expect(h.snakeToCamel('hello_world_im_here')).toBe('helloWorldImHere');
+    done();
+  });
+  test('adds 1 + 2 to equal 3', (done) => {
+    expect(h.camelToSnake('helloWorldImHere')).toBe('hello_world_im_here');
+    done();
+  });
 });
 
-test('adds 1 + 2 to equal 3', () => {
-  expect(h.camelToSnake('helloWorldImHere')).toBe('hello_world_im_here');
-});

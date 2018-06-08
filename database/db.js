@@ -30,6 +30,7 @@ const getReviews = function (productId, callback) {
 
   conn.query(query, (err, result) => {
     if (err) { throw err; }
+    // conn.end();
     callback(result);
   });
 };
@@ -49,7 +50,11 @@ const updateReview = function (reviewId, field, value, callback) {
     WHERE id=${reviewId};
     `;
   conn.query(query, (err, result) => {
-    if (err) { throw err; }
+    if (err) { 
+      throw err;
+      conn.end(); 
+    }
+    // conn.end();
     callback(result);
   });
 };
