@@ -9,22 +9,46 @@ class ReviewInteractor extends React.Component {
       votedNotHelpful: this.props.review.votedNotHelpful,
       inappropriate: this.props.review.inappropriate,
       id: this.props.review.reviewId,
+      leftFeedback: null,
     };
     this.updateReview = this.updateReview.bind(this);
   }
+
   updateReview(e) {
-    const { className } = e.target;
-    axios.put('/reviews', {
-      reviewId: this.state.id,
-      field: className,
-      value: this.state[className] + 1,
-    })
-      .then(() => {
-        console.log('You’ve successfully left feedback on this review!');
-        this.setState(prevState => (
-          { [className]: prevState[className] + 1 }
-        ));
-      });
+    const { className: field } = e.target;
+    const { leftFeedback } = this.state;
+    if (!leftFeedback) {
+      axios.put('/reviews', {
+        reviewId: this.state.id,
+        field: field,
+        value: this.state[field] + 1,
+      })
+        .then(() => {
+          console.log('You’ve successfully left feedback on this review!');
+          this.setState(prevState => (
+            {
+              [field]: prevState[field] + 1,
+              leftFeedback: field,
+            }
+          ));
+        });
+    }
+    if (leftFeedback === field) {
+      axios.put('/reviews', {
+        reviewId: this.state.id,
+        field: field,
+        value: this.state[field] - 1,
+      })
+        .then(() => {
+          console.log('You’ve successfully reversed your feedback on this review');
+          this.setState(prevState => (
+            {
+              [field]: prevState[field] - 1,
+              leftFeedback: null,
+            }
+          ));
+        });
+    }
   }
   render() {
     const { votedHelpful, votedNotHelpful } = this.state;
