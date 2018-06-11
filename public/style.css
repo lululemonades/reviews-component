@@ -1,22 +1,18 @@
 body {
-	font-family: Calibre,'Helvetica Neue','Helvetica','Roboto','Arial',sans-serif;
-	background-color: #fafafa;
-}
-
-div {
-  display: block;
+  font-family: Calibre,'Helvetica Neue','Helvetica','Roboto','Arial',sans-serif;
+  background-color: #fafafa;
 }
 
 .review-row {
-	display: flex;
+  display: flex;
   border-top-color: rgb(231, 231, 231);
   border-top-style: solid;
   border-top-width: 1px;
 }
 
 .user-info-box {
-	width: 330px;
-	padding: 35px;
+  width: 330px;
+  padding: 35px;
 }
 
 .user-info {
@@ -45,7 +41,7 @@ div {
 .user-info-value {
   text-transform: uppercase;
   font-size: 13px;
-  letter-spacing: 2px
+  letter-spacing: 2px;
   color: #777777;
   font-weight: 600;
 }
@@ -56,8 +52,8 @@ div {
 }
 
 .nickname {
-	color: #938454;
-	font-weight: 600;
+  color: #938454;
+  font-weight: 600;
   text-transform: uppercase;
   font-size: 13px;
   letter-spacing: 2px;
@@ -68,13 +64,13 @@ div {
 }
 
 .created-at {
-	text-transform: uppercase;
-	border-bottom: 1px solid red;
-	font-size: 11px;
+  text-transform: uppercase;
+  border-bottom: 1px solid red;
+  font-size: 11px;
   font-weight: 600;
   color: #333333;
   letter-spacing: 2px;
-	width: auto;
+  width: auto;
 }
 
 .review-details-box {
@@ -112,15 +108,13 @@ div {
 }
 
 .review-interactor-prefix {
-	float: left;
-  line-height: 1;
+  float: left;
   padding-right: 20px;
-  letter-spacing: normal;
   font-weight: 100;
 }
 
 .thumbs-up {
-	color: #938454;
+  color: #938454;
   text-decoration: none;
   font-size: 13px;
   font-weight: 400;
@@ -132,7 +126,7 @@ div {
 }
 
 .thumbs-down {
-	color: #938454;
+  color: #938454;
   text-decoration: none;
   font-size: 13px;
   font-weight: 400;
@@ -143,8 +137,8 @@ div {
   padding-right: 3px;
 }
 
-.positive::after, .negative::after {
-	font-size: 13px;
+.thumbs-up::after, .thumbs-down::after {
+  font-size: 13px;
   color: #938454;
   content: '|';
   margin-left: 15px;
@@ -152,7 +146,7 @@ div {
 }
 
 .inappropriate {
-	color: #938454;
+  color: #938454;
   text-transform: uppercase;
   line-height: 1;
   cursor: pointer;
@@ -244,30 +238,21 @@ width: 170px;
   background-color: rgba(0, 0, 0, 0);
   background-origin: padding-box;
   background-position-x: 100%;
-  background-position-y: 0px; background-repeat-x:; background-repeat-y:;
+  background-position-y: 0px; 
   background-size: auto;
   box-sizing: border-box;
   display: block;
-  font-size: 13px;
-  font-style: normal;
-  font-weight: 400;
   height: 9px;
-  letter-spacing: 2px;
-  line-height: 19.5px;
-  padding-top: 0px;
-  text-align: left;
   width: 48px;
 }
 
 .fit-slider-label-1 {
-  box-sizing:
-  border-box;
+  box-sizing: border-box;
   color:  rgb(153, 153, 153);
   display: block;
   font-size: 14px;
   font-style: normal;
   font-weight: 100;
-  left: 0px;
   letter-spacing: normal;
   line-height: 21px;
   text-transform: capitalize;
