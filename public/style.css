@@ -3,6 +3,10 @@ body {
 	background-color: #fafafa;
 }
 
+div {
+  display: block;
+}
+
 .review-row {
 	/*border: 3px solid black;*/
 	display: flex;
@@ -187,6 +191,9 @@ body {
 
 }
 
+/*-----------------------------------------------------------------------------*/
+/*THE SELECTORS BELOW ARE FOR THE FIT SLIDER, WHICH IS NOT CURRENTLY FUNCTIONAL*/
+/*-----------------------------------------------------------------------------*/
 .fit-indicator {
   /*overflow: hidden;*/
   /*zoom: 1;*/
@@ -200,37 +207,72 @@ body {
   text-align: left;
 }
 
+.fit-slider-img {
+background-attachment: scroll;
+background-clip: border-box;
+background-color: rgba(0, 0, 0, 0);
+background-image: url(fitSlider.gif);
+background-origin: padding-box;
+background-position-x: 100%;
+background-position-y: 3px; background-repeat-x:; background-repeat-y:;
+background-size: auto;
+box-sizing: border-box;
+/*color: rgb(119, 119, 119);*/
+display: block;
+font-family: Calibre, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+font-size: 13px;
+font-style: normal;
+font-weight: 400;
+height: 9px;
+left: 40px;
+letter-spacing: 2px;
+line-height: 19.5px;
+position: relative;
+text-align: left;
+width: 170px;
+/*-webkit-box-direction: normal;*/
+}
+
 .slider-overlay {
   background-image: url(https://lululemon.ugc.bazaarvoice.com/static/7834redes/filledSlider.png);
-  background-position-x: right;
-  background-position-y: 0px;
-  background-size: initial;
-  background-repeat-x: no-repeat;
-  background-repeat-y: no-repeat;
-  background-attachment: initial;
-  background-origin: initial;
-  background-clip: initial;
-  background-color: initial;
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-color: rgba(0, 0, 0, 0);
+  background-origin: padding-box;
+  background-position-x: 100%;
+  background-position-y: 0px; background-repeat-x:; background-repeat-y:;
+  background-size: auto;
+  box-sizing: border-box;
+  /*color: rgb(119, 119, 119);*/
+  display: block;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
   height: 9px;
-  padding-top: 0;
+  letter-spacing: 2px;
+  line-height: 19.5px;
+  padding-top: 0px;
+  text-align: left;
+  width: 48px;
+  /*-webkit-box-direction: normal;*/
 }
 
 .fit-slider-label-1 {
-box-sizing:
-border-box;
-color:  rgb(153, 153, 153);
-display: block;
-font-size: 14px;
-font-style: normal;
-font-weight: 100;
-left: 0px;
-letter-spacing: normal;
-line-height: 21px;
-position: absolute;
-/*text-align: left;*/
-text-transform: capitalize;
-/*top: 23px;*/
-width: 55px;
+  box-sizing:
+  border-box;
+  color:  rgb(153, 153, 153);
+  display: block;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 100;
+  left: 0px;
+  letter-spacing: normal;
+  line-height: 21px;
+  /*position: absolute;*/
+  /*text-align: left;*/
+  /*top: 23px;*/
+  text-transform: capitalize;
+  width: 55px;
 }
 
 .fit-slider-label-2 {

@@ -33,15 +33,15 @@ class ReviewInteractor extends React.Component {
         <span className="prefix">Was this review helpful to you?</span>
         <span className="positive">
           <span className="votedHelpful" onClick={this.updateReview}>Yes</span>
-          {" ( "} 
+          {' ( '}
           <span>{votedHelpful}</span>
-          {" ) "}
+          {' ) '}
         </span>
         <span className="negative">
           <span className="votedNotHelpful" onClick={this.updateReview}>No</span>
-          {" ( "}
+          {' ( '}
           <span>{votedNotHelpful}</span>
-          {" ) "}
+          {' ) '}
         </span>
         <span className="inappropriate" onClick={this.updateReview}>Report as inappropriate</span>
       </div>

@@ -17,16 +17,17 @@ const FitIndicator = props => (
     <div className="fit-slider-header">Fit:&nbsp;</div>
     <div className="fit-slider-label-1">Fitted</div>
     <div className="fit-slider-img">
-      <img
-        src={`ratingSlider${capitalize(props.fit)}.gif`}
-        alt={props.fit}
-        title={props.fit}
-      />
       <div className="slider-overlay" width={overlayWidths[props.fit]} />
     </div>
     <div className="fit-slider-label-2">Loose</div>
   </div>
 );
+
+// <img
+//  src={`ratingSlider${capitalize(props.fit)}.gif`}
+//  alt={props.fit}
+//  title={props.fit}
+// />
 
 
 export default FitIndicator;
