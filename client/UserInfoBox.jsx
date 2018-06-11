@@ -48,11 +48,11 @@ const UserInfoBox = ({ review }) => {
         <span className="user-likes-value">{whatYouDidntLike}</span>
       </div>
       }
+      {fit && <FitIndicator fit={fit} />}
     </div>
   );
 };
 
-// {fit && <FitIndicator fit={fit} />}
 
 export default UserInfoBox;
 

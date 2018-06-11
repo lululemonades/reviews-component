@@ -15,11 +15,13 @@ const overlayWidths = {
 const FitIndicator = props => (
   <div className="fit-indicator">
     <div className="fit-slider-header">Fit:&nbsp;</div>
-    <div className="fit-slider-label-1">Fitted</div>
-    <div className="fit-slider-img">
-      <div className="slider-overlay" width={overlayWidths[props.fit]} />
+    <div className="fit-slider-wrapper">
+      <div className="fit-slider-label-1">Fitted</div>
+      <div className="fit-slider-img">
+        <div className="slider-overlay" width={overlayWidths[props.fit]} />
+      </div>
+      <div className="fit-slider-label-2">Loose</div>
     </div>
-    <div className="fit-slider-label-2">Loose</div>
   </div>
 );
 
