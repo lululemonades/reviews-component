@@ -19,28 +19,35 @@ div {
 	padding: 35px;
 }
 
-.review-interactor {
-	width: 730px;
-  height: auto;
-  padding-top: 25px;
-  background-image: url(https://lululemon.ugc.bazaarvoice.com/static/7834redes/dottedBorder.gif);
-  background-position-x: left;
-  background-position-y: top;
-  background-size: initial;
-  background-repeat-x: repeat;
-  background-repeat-y: no-repeat;
-  background-attachment: initial;
-  background-origin: initial;
-  background-clip: initial;
-  background-color: transparent;
+.user-info {
+  color: #777777;
+  display: block;
+  margin-bottom: 8px;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 400;
+  box-sizing: border-box;
+  line-height: 1.5;
+  text-align: left;
 }
 
-.right-side-container {
-	padding: 35px;
+.user-info-label {
+  padding-right: 3px;
+  text-transform: uppercase;
+  color: #999999;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
 }
 
-.review-details-box {
-	width: 730px;
+.user-info-value {
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 2px
+  color: #777777;
+  font-weight: 600;
 }
 
 .nickname-container {
@@ -56,6 +63,10 @@ div {
   letter-spacing: 2px;
 }
 
+.right-side-container {
+  padding: 35px;
+}
+
 .created-at {
 	text-transform: uppercase;
 	border-bottom: 1px solid red;
@@ -66,21 +77,41 @@ div {
 	width: auto;
 }
 
+.review-details-box {
+  width: 730px;
+}
+
 .title {
   margin: 20px 0;
-	line-height: 1.2;
+  line-height: 1.2;
   font-size: 25px;
   font-weight: 100;
 }
 
 .details {
-	font-weight: 100;
+  font-weight: 100;
   line-height: 1.3;
   margin-bottom: 25px;
   color: #666666;
 }
 
-.prefix {
+.review-interactor {
+  width: 730px;
+  height: auto;
+  padding-top: 25px;
+  background-image: url(https://lululemon.ugc.bazaarvoice.com/static/7834redes/dottedBorder.gif);
+  background-position-x: left;
+  background-position-y: top;
+  background-size: initial;
+  background-repeat-x: repeat;
+  background-repeat-y: no-repeat;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: transparent;
+}
+
+.review-interactor-prefix {
 	float: left;
   line-height: 1;
   padding-right: 20px;
@@ -88,7 +119,7 @@ div {
   font-weight: 100;
 }
 
-.positive {
+.thumbs-up {
 	color: #938454;
   text-decoration: none;
   font-size: 13px;
@@ -100,7 +131,7 @@ div {
   padding-right: 3px;
 }
 
-.negative {
+.thumbs-down {
 	color: #938454;
   text-decoration: none;
   font-size: 13px;
@@ -128,37 +159,6 @@ div {
   font-size: 13px;
   margin-top: 2px;
   padding-bottom: 30px;
-}
-
-.user-info-label {
-  padding-right: 3px;
-  text-transform: uppercase;
-  color: #999999;
-  font-size: 13px;
-  letter-spacing: 2px;
-  font-weight: 400;
-  line-height: 1.5;
-  text-align: left;
-}
-
-.user-info-value {
-  text-transform: uppercase;
-  font-size: 13px;
-  letter-spacing: 2px
-  color: #777777;
-  font-weight: 600;
-}
-
-.user-info {
-  color: #777777;
-  display: block;
-  margin-bottom: 8px;
-  font-size: 13px;
-  letter-spacing: 2px;
-  font-weight: 400;
-  box-sizing: border-box;
-  line-height: 1.5;
-  text-align: left;
 }
 
 .user-likes {
@@ -226,7 +226,6 @@ background: url(fitSlider.gif) no-repeat right 3px;
 background-size: auto;
 box-sizing: border-box;
 display: block;
-font-family: Calibre, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
 font-size: 13px;
 font-style: normal;
 font-weight: 400;

@@ -4,7 +4,7 @@ import FitIndicator from './FitIndicator.jsx';
 const UserInfoBox = ({ review }) => {
   const {
     nickname, rating, city, state, country, athleticType,
-    age, bodyType, whatYouLike, whatYouDidntLike, fit
+    age, bodyType, whatYouLike, whatYouDidntLike, fit,
   } = review;
 
   let ratingImg;
