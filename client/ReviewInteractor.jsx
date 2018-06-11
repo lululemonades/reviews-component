@@ -30,11 +30,19 @@ class ReviewInteractor extends React.Component {
     const { votedHelpful, votedNotHelpful } = this.state;
     return (
       <div className="review-interactor">
-        Was this review helpful to you?
-        <span className="votedHelpful" onClick={this.updateReview}>Yes</span>
-        <span>{votedHelpful}</span>
-        <span className="votedNotHelpful" onClick={this.updateReview}>No</span>
-        <span>{votedNotHelpful}</span>
+        <span className="prefix">Was this review helpful to you?</span>
+        <span className="positive">
+          <span className="votedHelpful" onClick={this.updateReview}>Yes</span>
+          {" ( "} 
+          <span>{votedHelpful}</span>
+          {" ) "}
+        </span>
+        <span className="negative">
+          <span className="votedNotHelpful" onClick={this.updateReview}>No</span>
+          {" ( "}
+          <span>{votedNotHelpful}</span>
+          {" ) "}
+        </span>
         <span className="inappropriate" onClick={this.updateReview}>Report as inappropriate</span>
       </div>
     );

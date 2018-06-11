@@ -14,11 +14,11 @@ app.get('/reviews/:productId/', (req, res) => {
   db.getReviews(req.params.productId, (reviews) => {
     res.status(200).send(reviews);
   });
-});	
+});
 
 app.put('/reviews', (req, res) => {
   const { reviewId, field, value } = req.body;
-  db.updateReview(reviewId, field, value, (_) => {
+  db.updateReview(reviewId, field, value, () => {
     res.status(204).end();
   });
 });

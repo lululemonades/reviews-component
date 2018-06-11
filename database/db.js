@@ -36,12 +36,6 @@ const getReviews = function (productId, callback) {
 };
 
 const updateReview = function (reviewId, field, value, callback) {
-  // const convertCamelToSnake = {
-  //   votedHelpful: 'voted_helpful',
-  //   votedNotHelpful: 'voted_not_helpful',
-  //   inappropriate: 'inappropriate',
-  // };
-  // const snakeCaseField = convertCamelToSnake[camelCaseField];
   const snakedField = helpers.camelToSnake(field);
   console.log(reviewId, snakedField, value);
   const query = `
@@ -49,13 +43,13 @@ const updateReview = function (reviewId, field, value, callback) {
     SET ${snakedField} = ${value}
     WHERE id=${reviewId};
     `;
-  conn.query(query, (err, result) => {
-    if (err) { 
+  conn.query(query, (err, results) => {
+    if (err) {
+      // conn.end();
       throw err;
-      conn.end(); 
     }
     // conn.end();
-    callback(result);
+    callback();
   });
 };
 

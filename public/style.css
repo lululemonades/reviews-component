@@ -1,22 +1,41 @@
+body {
+	font-family: Calibre,'Helvetica Neue','Helvetica','Roboto','Arial',sans-serif;
+	background-color: #fafafa;
+}
+
 .review-row {
-	border: 3px solid black;
+	/*border: 3px solid black;*/
 	display: flex;
 }
 
 .user-info-box {
-	border: 3px solid orange;
+	width: 330px;
+	padding: 35px;
+	/*outline: 3px solid orange;*/
 }
 
 .review-interactor {
-	border: 3px solid green;
+	width: 730px;
+  height: auto;
+  padding-top: 25px;
+  background-image: url(https://lululemon.ugc.bazaarvoice.com/static/7834redes/dottedBorder.gif);
+  background-position-x: left;
+  background-position-y: top;
+  background-size: initial;
+  background-repeat-x: repeat;
+  background-repeat-y: no-repeat;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: transparent;
 }
 
 .right-side-container {
-	border: 3px solid blue;
+	padding: 35px;
 }
 
 .review-details-box {
-	border: 3px solid purple;
+	width: 730px;
 }
 
 .nickname-container {
@@ -30,4 +49,199 @@
   text-transform: uppercase;
   font-size: 13px;
   letter-spacing: 2px;
+}
+
+.created-at {
+	text-transform: uppercase;
+	border-bottom: 1px solid red;
+	font-size: 11px;
+  font-weight: 600;
+  color: #333333;
+  letter-spacing: 2px;
+	width: auto;
+}
+
+.title {
+  margin: 20px 0;
+	line-height: 1.2;
+  font-size: 25px;
+  font-weight: 100;
+}
+
+.details {
+	font-weight: 100;
+  line-height: 1.3;
+  margin-bottom: 25px;
+  color: #666666;
+	/*border-bottom: 1px dotted black;*/
+}
+
+.prefix {
+	float: left;
+  line-height: 1;
+  padding-right: 20px;
+  letter-spacing: normal;
+  font-weight: 100;
+}
+
+.positive {
+	color: #938454;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1;
+  white-space: nowrap;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding-right: 3px;
+}
+
+.negative {
+	color: #938454;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1;
+  white-space: nowrap;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding-right: 3px;
+}
+
+.positive::after, .negative::after {
+	font-size: 13px;
+  color: #938454;
+  content: '|';
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.inappropriate {
+	color: #938454;
+  text-transform: uppercase;
+  line-height: 1;
+  cursor: pointer;
+  font-size: 13px;
+  margin-top: 2px;
+  padding-bottom: 30px;
+}
+
+.user-info-label {
+  padding-right: 3px;
+  text-transform: uppercase;
+  color: #999999;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.user-info-value {
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 2px
+  color: #777777;
+  font-weight: 600;
+}
+
+.user-info {
+  color: #777777;
+  display: block;
+  margin-bottom: 8px;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 400;
+  box-sizing: border-box;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.user-likes {
+  color: #777777;
+  /*margin-bottom: 15px;*/
+  box-sizing: border-box;
+  display: block;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+  margin: 25px 0;
+}
+
+.user-likes-label {
+  text-transform: uppercase;
+  padding-right: 3px;
+  font-weight: 600;
+  display: block;
+  color: #666666;
+}
+
+.user-likes-value {
+  font-style: normal;
+  text-transform: none;
+  font-weight: 100;
+  font-size: 16px;
+  letter-spacing: 0;
+
+}
+
+.fit-indicator {
+  /*overflow: hidden;*/
+  /*zoom: 1;*/
+  color: #777777;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.slider-overlay {
+  background-image: url(https://lululemon.ugc.bazaarvoice.com/static/7834redes/filledSlider.png);
+  background-position-x: right;
+  background-position-y: 0px;
+  background-size: initial;
+  background-repeat-x: no-repeat;
+  background-repeat-y: no-repeat;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: initial;
+  height: 9px;
+  padding-top: 0;
+}
+
+.fit-slider-label-1 {
+box-sizing:
+border-box;
+color:  rgb(153, 153, 153);
+display: block;
+font-size: 14px;
+font-style: normal;
+font-weight: 100;
+left: 0px;
+letter-spacing: normal;
+line-height: 21px;
+position: absolute;
+/*text-align: left;*/
+text-transform: capitalize;
+/*top: 23px;*/
+width: 55px;
+}
+
+.fit-slider-label-2 {
+  font-size: 14px;
+  color: #999999;
+  width: 55px;
+  /*position: absolute;*/
+  /*left: 220px;*/
+  /*top: 23px;*/
+  text-align: left;
+  text-transform: capitalize;
+  font-weight: 100;
+  letter-spacing: 0;
 }
