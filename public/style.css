@@ -3,12 +3,12 @@ body {
   background-color: #fafafa;
 }
 
-.review-row {
+/*.review-row {
   display: flex;
   border-top-color: rgb(231, 231, 231);
   border-top-style: solid;
   border-top-width: 1px;
-}
+}*/
 
 .user-info-box {
   width: 330px;

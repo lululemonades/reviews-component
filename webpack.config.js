@@ -4,7 +4,7 @@ const path = require('path');
 const bundlePath = path.join(__dirname, '/dist');
 
 module.exports = {
-  entry: path.join(__dirname, '/client/index.jsx'),
+  entry: path.join(__dirname, '/client/components/index.jsx'),
   module: {
     rules: [
       {
