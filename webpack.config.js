@@ -8,22 +8,24 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
         options: {
-          presets: ['react', 'es2015', 'env']
-        }
+          presets: ['react', 'es2015', 'env'],
+        },
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
-      }
-    ]
+        use: ['style-loader', 'css-loader'],
+      },
+    ],
   },
   output: {
     path: bundlePath,
     filename: 'bundle.js',
-  }
-  // resolve: { extensions: ['.js', '.jsx'] } // can't get this to work!
+  },
+  // resolve: {
+  //   extensions: ['*', '.js', '.jsx'],
+  // },
 };
