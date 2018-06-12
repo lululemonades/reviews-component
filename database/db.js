@@ -25,10 +25,10 @@ const getReviews = function (productId, callback) {
       reviews.voted_not_helpful AS votedNotHelpful
     FROM reviews
     LEFT JOIN users ON reviews.user_id=users.id
-    WHERE reviews.product_id=${productId};
+    WHERE reviews.product_id=?;
     `;
 
-  conn.query(query, (err, result) => {
+  conn.query(query, [productId], (err, result) => {
     if (err) { throw err; }
     // conn.end();
     callback(result);
@@ -38,12 +38,8 @@ const getReviews = function (productId, callback) {
 const updateReview = function (reviewId, field, value, callback) {
   const snakedField = helpers.camelToSnake(field);
   console.log(reviewId, snakedField, value);
-  const query = `
-    UPDATE reviews
-    SET ${snakedField} = ${value}
-    WHERE id=${reviewId};
-    `;
-  conn.query(query, (err, results) => {
+  const query = `UPDATE reviews SET ${snakedField}=? WHERE id=?;`;
+  conn.query(query, [value, reviewId], (err) => {
     if (err) {
       // conn.end();
       throw err;
