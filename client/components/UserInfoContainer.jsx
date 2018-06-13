@@ -1,5 +1,5 @@
 import React from 'react';
-import UserInfoWrapper from '../styles/UserInfoContainer.style.js';
+import UserInfoEntry from './UserInfoEntry.jsx';
 
 const UserInfoContainer = ({
   review: {
@@ -7,22 +7,10 @@ const UserInfoContainer = ({
   },
 }) => (
   <div>
-    <UserInfoWrapper>
-      <span className="user-info-label">LOCATION:&nbsp;</span>
-      <span className="user-info-value">{`${city}, ${state.toUpperCase()}, ${country}`}</span>
-    </UserInfoWrapper>
-    <UserInfoWrapper>
-      <span className="user-info-label">ATHLETIC TYPE:&nbsp;</span>
-      <span className="user-info-value">{athleticType}</span>
-    </UserInfoWrapper>
-    <UserInfoWrapper>
-      <span className="user-info-label">AGE:&nbsp;</span>
-      <span className="user-info-value">{age}</span>
-    </UserInfoWrapper>
-    <UserInfoWrapper>
-      <span className="user-info-label">BODY TYPE:&nbsp;</span>
-      <span className="user-info-value">{bodyType}</span>
-    </UserInfoWrapper>
+    <UserInfoEntry label="LOCATION" value={`${city}, ${state.toUpperCase()}, ${country}`} />
+    <UserInfoEntry label="ATHLETIC TYPE" value={athleticType} />
+    <UserInfoEntry label="AGE" value={age} />
+    <UserInfoEntry label="BODY TYPE" value={bodyType} />
   </div>
 );
 

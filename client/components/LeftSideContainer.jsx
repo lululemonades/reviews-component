@@ -1,6 +1,6 @@
 import React from 'react';
-import FitIndicator from './FitIndicator.jsx';
 import UserInfoContainer from './UserInfoContainer.jsx';
+import ProductImpression from './ProductImpression.jsx';
 import LeftSideContainerWrapper from '../styles/LeftSideContainer.style.js';
 
 const LeftSideContainer = ({ review }) => {
@@ -24,20 +24,15 @@ const LeftSideContainer = ({ review }) => {
       <div className="nickname-container">
         <span className="nickname">{nickname}</span>
       </div>
+
       <UserInfoContainer review={review} />
-      { whatYouLike &&
-      <div className="user-likes">
-        <span className="user-likes-label">What You Like</span>
-        <span className="user-likes-value">{whatYouLike}</span>
-      </div>
-      }
-      { whatYouDidntLike &&
-      <div className="user-likes">
-        <span className="user-likes-label">What You Didn't Like</span>
-        <span className="user-likes-value">{whatYouDidntLike}</span>
-      </div>
-      }
-      {fit && <FitIndicator fit={fit} />}
+
+      <ProductImpression
+        whatYouLike={whatYouLike}
+        whatYouDidntLike={whatYouDidntLike}
+        fit={fit}
+      />
+
     </LeftSideContainerWrapper>
   );
 };

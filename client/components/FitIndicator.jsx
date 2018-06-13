@@ -1,4 +1,5 @@
 import React from 'react';
+import FitIndicatorWrapper from '../styles/FitIndicatorWrapper.style.js';
 
 const capitalize = str => str.charAt(0).toUpperCase() + str.slice(1);
 
