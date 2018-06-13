@@ -1,9 +1,10 @@
 import React from 'react';
 import FitIndicator from './FitIndicator.jsx';
+import ProductImpressionWrapper from '../styles/ProductImpression.style.js';
 
 
 const ProductImpression = ({ whatYouLike, whatYouDidntLike, fit }) => (
-  <div>
+  <ProductImpressionWrapper>
 
     { whatYouLike &&
     <div className="user-likes">
@@ -23,7 +24,7 @@ const ProductImpression = ({ whatYouLike, whatYouDidntLike, fit }) => (
       <FitIndicator fit={fit} />
     }
 
-  </div>
+  </ProductImpressionWrapper>
 );
 
 export default ProductImpression;

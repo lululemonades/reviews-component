@@ -14,6 +14,7 @@ const overlayWidths = {
 };
 
 const FitIndicator = props => (
+  <FitIndicatorWrapper>
   <div className="fit-indicator">
     <div className="fit-slider-header">Fit:&nbsp;</div>
     <div className="fit-slider-wrapper">
@@ -24,6 +25,7 @@ const FitIndicator = props => (
       <div className="fit-slider-label-2">Loose</div>
     </div>
   </div>
+  </FitIndicatorWrapper>
 );
 
 // <img

@@ -59,9 +59,9 @@ body {
   letter-spacing: 2px;
 }
 
-.right-side-container {
+/*.right-side-container {
   padding: 35px;
-}
+}*/
 
 .created-at {
   text-transform: uppercase;
@@ -91,7 +91,7 @@ body {
   color: #666666;
 }
 
-.review-interactor {
+/*.review-interactor {
   width: 730px;
   height: auto;
   padding-top: 25px;
@@ -182,12 +182,9 @@ body {
   font-size: 16px;
   letter-spacing: 0;
 
-}
+}*/
 
-/*-----------------------------------------------------------------------------*/
-/*THE SELECTORS BELOW ARE FOR THE FIT SLIDER, WHICH IS NOT CURRENTLY FUNCTIONAL*/
-/*-----------------------------------------------------------------------------*/
-.fit-indicator {
+/*.fit-indicator {
   color: #777777;
   margin-bottom: 20px;
   box-sizing: border-box;
@@ -224,7 +221,7 @@ body {
   font-style: normal;
   font-weight: 400;
   height: 9px;
-  */letter-spacing: 2px;
+  letter-spacing: 2px;
   line-height: 19.5px;
   position: relative;
   text-align: left;
@@ -268,4 +265,4 @@ body {
   font-weight: 100;
   letter-spacing: 0;
   padding-left: 12px;
-}
+}*/
