@@ -27,7 +27,6 @@ class App extends React.Component {
       });
   }
   render() {
-    console.log('Reviews to render: ', this.state.reviews);
     return (
       <div>
         {

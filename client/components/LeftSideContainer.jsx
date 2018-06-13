@@ -1,7 +1,7 @@
 import React from 'react';
 import FitIndicator from './FitIndicator.jsx';
 
-const UserInfoBox = ({ review }) => {
+const LeftSideContainer = ({ review }) => {
   const {
     nickname, rating, city, state, country, athleticType,
     age, bodyType, whatYouLike, whatYouDidntLike, fit,
@@ -15,7 +15,7 @@ const UserInfoBox = ({ review }) => {
   if (rating === 5) { ratingImg = 'rating5stars.gif'; }
 
   return (
-    <div className="user-info-box">
+    <div className="left-side-container">
       <img src={ratingImg} alt="star rating" />
       <div className="nickname-container">
         <span className="nickname">{nickname}</span>
@@ -54,5 +54,5 @@ const UserInfoBox = ({ review }) => {
 };
 
 
-export default UserInfoBox;
+export default LeftSideContainer;
 
