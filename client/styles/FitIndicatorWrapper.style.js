@@ -30,7 +30,7 @@ const FitIndicatorWrapper = styled.section`
   background-attachment: scroll;
   background-clip: border-box;
   background-color: rgba(0, 0, 0, 0);
-  background: url(public/fitSlider.gif) no-repeat right 3px;
+  background: url(reviews/public/fitSlider.gif) no-repeat right 3px;
   background-size: auto;
   box-sizing: border-box;
   display: block;

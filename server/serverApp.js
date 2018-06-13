@@ -10,7 +10,7 @@ const app = express();
 /* ******** MIDDLEWARE ************************ */
 app.use(cors());
 app.use('/', express.static(path.join(__dirname, '../public')));
-app.use('/public', express.static(path.join(__dirname, '../public')));
+app.use('/reviews/public', express.static(path.join(__dirname, '../public')));
 app.use(bodyParser.json());
 
 /* ******** ROUTING *************************** */
