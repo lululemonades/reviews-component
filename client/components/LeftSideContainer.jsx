@@ -1,11 +1,15 @@
 import React from 'react';
 import FitIndicator from './FitIndicator.jsx';
+import UserInfoContainer from './UserInfoContainer.jsx';
+import LeftSideContainerWrapper from '../styles/LeftSideContainer.style.js';
 
 const LeftSideContainer = ({ review }) => {
   const {
-    nickname, rating, city, state, country, athleticType,
-    age, bodyType, whatYouLike, whatYouDidntLike, fit,
+    nickname, rating, whatYouLike, whatYouDidntLike, fit,
   } = review;
+
+  console.log('this is review')
+  console.log(review);
 
   let ratingImg;
   if (rating === 1) { ratingImg = 'rating1stars.gif'; }
@@ -15,27 +19,12 @@ const LeftSideContainer = ({ review }) => {
   if (rating === 5) { ratingImg = 'rating5stars.gif'; }
 
   return (
-    <div className="left-side-container">
+    <LeftSideContainerWrapper>
       <img src={ratingImg} alt="star rating" />
       <div className="nickname-container">
         <span className="nickname">{nickname}</span>
       </div>
-      <div className="user-info">
-        <span className="user-info-label">LOCATION:&nbsp;</span>
-        <span className="user-info-value">{`${city}, ${state.toUpperCase()}, ${country}`}</span>
-      </div>
-      <div className="user-info">
-        <span className="user-info-label">ATHLETIC TYPE:&nbsp;</span>
-        <span className="user-info-value">{athleticType}</span>
-      </div>
-      <div className="user-info">
-        <span className="user-info-label">AGE:&nbsp;</span>
-        <span className="user-info-value">{age}</span>
-      </div>
-      <div className="user-info">
-        <span className="user-info-label">BODY TYPE:&nbsp;</span>
-        <span className="user-info-value">{bodyType}</span>
-      </div>
+      <UserInfoContainer review={review} />
       { whatYouLike &&
       <div className="user-likes">
         <span className="user-likes-label">What You Like</span>
@@ -49,7 +38,7 @@ const LeftSideContainer = ({ review }) => {
       </div>
       }
       {fit && <FitIndicator fit={fit} />}
-    </div>
+    </LeftSideContainerWrapper>
   );
 };
 
