@@ -10,11 +10,11 @@ const LeftSideContainer = ({ review }) => {
   } = review;
 
   let ratingImg;
-  if (rating === 1) { ratingImg = 'rating1stars.gif'; }
-  if (rating === 2) { ratingImg = 'rating2stars.gif'; }
-  if (rating === 3) { ratingImg = 'rating3stars.gif'; }
-  if (rating === 4) { ratingImg = 'rating4stars.gif'; }
-  if (rating === 5) { ratingImg = 'rating5stars.gif'; }
+  if (rating === 1) { ratingImg = 'public/rating1stars.gif'; }
+  if (rating === 2) { ratingImg = 'public/rating2stars.gif'; }
+  if (rating === 3) { ratingImg = 'public/rating3stars.gif'; }
+  if (rating === 4) { ratingImg = 'public/rating4stars.gif'; }
+  if (rating === 5) { ratingImg = 'public/rating5stars.gif'; }
 
   return (
     <LeftSideContainerWrapper>

@@ -1,7 +1,7 @@
 const webpack = require('webpack');
 const path = require('path');
 
-const bundlePath = path.join(__dirname, '/dist');
+const bundlePath = path.join(__dirname, '/public');
 
 module.exports = {
   entry: path.join(__dirname, '/client/components/index.jsx'),
