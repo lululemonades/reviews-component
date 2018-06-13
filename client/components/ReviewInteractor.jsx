@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import ReviewInteractorWrapper from '../styles/ReviewInteractor.style.js';
 
 class ReviewInteractor extends React.Component {
   constructor(props) {
@@ -53,6 +54,7 @@ class ReviewInteractor extends React.Component {
   render() {
     const { votedHelpful, votedNotHelpful } = this.state;
     return (
+      <ReviewInteractorWrapper>
       <div className="review-interactor">
         <span className="review-interactor-prefix">Was this review helpful to you?</span>
         <span className="thumbs-up">
@@ -69,6 +71,7 @@ class ReviewInteractor extends React.Component {
         </span>
         <span className="inappropriate" onClick={this.updateReview}>Report as inappropriate</span>
       </div>
+      </ReviewInteractorWrapper>
     );
   }
 }

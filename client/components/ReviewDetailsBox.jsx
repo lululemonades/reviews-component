@@ -1,4 +1,5 @@
 import React from 'react';
+import ReviewDetailsWrapper from '../styles/ReviewDetails.style.js';
 
 const createLongDate = function (datetime) {
   const month = [
@@ -20,11 +21,13 @@ const createLongDate = function (datetime) {
 };
 
 const ReviewDetailsBox = props => (
+  <ReviewDetailsWrapper>
   <div className="review-details-box">
     <span className="created-at"> {createLongDate(props.review.createdAt)} </span>
     <div className="title"> {props.review.title} </div>
     <div className="details"> {props.review.details} </div>
   </div>
+  </ReviewDetailsWrapper>
 );
 
 export default ReviewDetailsBox;
