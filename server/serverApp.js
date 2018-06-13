@@ -1,11 +1,13 @@
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 
 const db = require('../database/db.js');
 // why doesn't './database.db.js' work here?
 
 const app = express();
+app.use(cors());
 app.use('/', express.static(path.join(__dirname, '../public')));
 app.use('/', express.static(path.join(__dirname, '../dist')));
 app.use(bodyParser.json());
