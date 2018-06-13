@@ -23,7 +23,7 @@ module.exports = {
   },
   output: {
     path: bundlePath,
-    filename: 'bundle.js',
+    filename: 'review-module-bundle.js',
   },
   // resolve: {
   //   extensions: ['*', '.js', '.jsx'],
