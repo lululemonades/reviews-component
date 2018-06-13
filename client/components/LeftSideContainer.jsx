@@ -1,15 +1,13 @@
 import React from 'react';
 import UserInfoContainer from './UserInfoContainer.jsx';
 import ProductImpression from './ProductImpression.jsx';
+import Nickname from './Nickname.jsx';
 import LeftSideContainerWrapper from '../styles/LeftSideContainer.style.js';
 
 const LeftSideContainer = ({ review }) => {
   const {
     nickname, rating, whatYouLike, whatYouDidntLike, fit,
   } = review;
-
-  console.log('this is review')
-  console.log(review);
 
   let ratingImg;
   if (rating === 1) { ratingImg = 'rating1stars.gif'; }
@@ -21,18 +19,13 @@ const LeftSideContainer = ({ review }) => {
   return (
     <LeftSideContainerWrapper>
       <img src={ratingImg} alt="star rating" />
-      <div className="nickname-container">
-        <span className="nickname">{nickname}</span>
-      </div>
-
+      <Nickname nickname={nickname} />
       <UserInfoContainer review={review} />
-
       <ProductImpression
         whatYouLike={whatYouLike}
         whatYouDidntLike={whatYouDidntLike}
         fit={fit}
       />
-
     </LeftSideContainerWrapper>
   );
 };

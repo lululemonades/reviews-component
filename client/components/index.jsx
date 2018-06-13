@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 import ReviewRow from './ReviewRow.jsx';
+import BodyWrapper from '../styles/Body.style.js';
 
 class App extends React.Component {
   constructor(props) {
@@ -28,12 +29,12 @@ class App extends React.Component {
   }
   render() {
     return (
-      <div>
+      <BodyWrapper>
         {
           this.state.reviews.map(review => (
             <ReviewRow review={review} key={review.reviewId} />))
         }
-      </div>
+      </BodyWrapper>
     );
   }
 }
