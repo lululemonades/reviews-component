@@ -1,6 +1,6 @@
 # Project Name
 
-> Project description
+> Luke's Component Reviews Module
 
 ## Related Projects
 
@@ -9,17 +9,17 @@
   - https://github.com/teamName/repo
   - https://github.com/teamName/repo
 
-## Table of Contents
-
-1. [Usage](#Usage)
-1. [Requirements](#requirements)
-1. [Development](#development)
 
 ## Usage
 
-> Some usage instructions
+> Database
+-- Start your mysql database by running `mysql.server start`
+-- Build my database by cd'ing into my database directory, then run `mysql -u -root < schema.sql`
+  -- note: instead of `root`, you may need to user your own username. also, if your database is
+  password protected, use the `-p` flag with that command.
+-- Seed the database: from the same database directory, run `node seeders.js` to seed the databse.
 
-## Requirements
+<!-- ## Requirements
 
 An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
 
@@ -37,3 +37,4 @@ npm install -g webpack
 npm install
 ```
 
+ -->
