@@ -9,17 +9,24 @@ const app = express();
 
 /* ******** MIDDLEWARE ************************ */
 app.use(cors());
-app.use('/', express.static(path.join(__dirname, '../public')));
-app.use('/reviews/public', express.static(path.join(__dirname, '../public')));
 app.use(bodyParser.json());
+app.use('/', express.static(path.join(__dirname, '../public')));
+app.use('/reviews-module', express.static(path.join(__dirname, '../public')));
+// app.use('/reviews-module', (req, res, next) => {
+//   // console.log('req.originalUrl', req.originalUrl);
+//   // let newUrl = req.originalUrl.split('/').slice(2).join('/');
+//   // req.originalUrl = '/' + newUrl;
+//   // console.log(req.originalUrl);
+//   next();
+// });
 
 /* ******** ROUTING *************************** */
-app.get('/reviews/:productId/', (req, res) => {
+app.get('/reviews-module/reviews/:productId/', (req, res) => {
   db.getReviews(req.params.productId, (reviews) => {
     res.status(200).send(reviews);
   });
 });
-app.put('/reviews', (req, res) => {
+app.put('/reviews-module/reviews', (req, res) => {
   const { reviewId, field, value } = req.body;
   db.updateReview(reviewId, field, value, () => {
     res.status(204).end();

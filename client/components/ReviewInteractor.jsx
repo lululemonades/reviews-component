@@ -2,6 +2,8 @@ import React from 'react';
 import axios from 'axios';
 import ReviewInteractorWrapper from '../styles/ReviewInteractor.style.js';
 
+axios.defaults.baseURL = '/reviews-module';
+
 class ReviewInteractor extends React.Component {
   constructor(props) {
     super(props);

@@ -4,6 +4,9 @@ import axios from 'axios';
 import ReviewRow from './ReviewRow.jsx';
 import BodyWrapper from '../styles/Body.style.js';
 
+axios.defaults.baseURL = '/reviews-module';
+
+
 class App extends React.Component {
   constructor(props) {
     super(props);
