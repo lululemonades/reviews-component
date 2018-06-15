@@ -11,6 +11,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      // productId: window.location.search.slice(1),
       productId: 1,
       reviews: [],
     };

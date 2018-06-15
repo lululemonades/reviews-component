@@ -20,6 +20,7 @@ class ReviewInteractor extends React.Component {
   updateReview(e) {
     const { className: field } = e.target;
     const { leftFeedback } = this.state;
+    console.log('you clicked on ', field);
     if (!leftFeedback) {
       axios.put('/reviews', {
         reviewId: this.state.id,

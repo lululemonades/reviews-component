@@ -10,6 +10,10 @@ const app = express();
 /* ******** MIDDLEWARE ************************ */
 app.use(cors());
 app.use(bodyParser.json());
+app.use((req, res, next) => {
+  console.log('Lukes\'s server recieved this request: ', req.originalUrl);
+  next();
+});
 app.use('/', express.static(path.join(__dirname, '../public')));
 app.use('/reviews-module', express.static(path.join(__dirname, '../public')));
 // app.use('/reviews-module', (req, res, next) => {
@@ -28,6 +32,7 @@ app.get('/reviews-module/reviews/:productId/', (req, res) => {
 });
 app.put('/reviews-module/reviews', (req, res) => {
   const { reviewId, field, value } = req.body;
+  console.log('received put request with: ', reviewId, field, value);
   db.updateReview(reviewId, field, value, () => {
     res.status(204).end();
   });
