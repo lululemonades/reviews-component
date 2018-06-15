@@ -10,11 +10,11 @@ const LeftSideContainer = ({ review }) => {
   } = review;
 
   let ratingImg;
-  if (rating === 1) { ratingImg = '/reviews-module/rating1stars.gif'; }
-  if (rating === 2) { ratingImg = '/reviews-module/rating2stars.gif'; }
-  if (rating === 3) { ratingImg = '/reviews-module/rating3stars.gif'; }
-  if (rating === 4) { ratingImg = '/reviews-module/rating4stars.gif'; }
-  if (rating === 5) { ratingImg = '/reviews-module/rating5stars.gif'; }
+  if (rating === 1) { ratingImg = 'https://lululemon.ugc.bazaarvoice.com/7834redes/1_0/5/rating.gif'; }
+  if (rating === 2) { ratingImg = 'https://lululemon.ugc.bazaarvoice.com/7834redes/2_0/5/rating.gif'; }
+  if (rating === 3) { ratingImg = 'https://lululemon.ugc.bazaarvoice.com/7834redes/3_0/5/rating.gif'; }
+  if (rating === 4) { ratingImg = 'https://lululemon.ugc.bazaarvoice.com/7834redes/4_0/5/rating.gif'; }
+  if (rating === 5) { ratingImg = 'https://lululemon.ugc.bazaarvoice.com/7834redes/5_0/5/rating.gif'; }
 
   return (
     <LeftSideContainerWrapper>
