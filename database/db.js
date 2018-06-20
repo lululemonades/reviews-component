@@ -1,10 +1,19 @@
 const mysql = require('mysql');
 const helpers = require('./helpers.js');
 
+// const config = {
+//   database: 'lululemon',
+//   user: 'root',
+// };
+
 const config = {
   database: 'lululemon',
   user: 'root',
+  password: 'lulupass',
+  port: 3306,
+  host: 'lululemon.cq3rpcxev3es.us-west-1.rds.amazonaws.com',
 };
+
 
 const conn = mysql.createConnection(config);
 conn.connect();

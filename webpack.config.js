@@ -8,12 +8,16 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        // test: /\.(js|jsx)$/,
+        test: /\.jsx?$/,
+        resolve: {
+          extensions: ['.js', '.jsx'],
+        },
         exclude: /node_modules/,
         loader: 'babel-loader',
         options: {
           presets: ['react', 'es2015', 'env'],
-          plugins: ["babel-plugin-styled-components"],
+          plugins: ['babel-plugin-styled-components'],
         },
       },
       {
@@ -26,7 +30,4 @@ module.exports = {
     path: bundlePath,
     filename: 'review-module-bundle.js',
   },
-  // resolve: {
-  //   extensions: ['*', '.js', '.jsx'],
-  // },
 };

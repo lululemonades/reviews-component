@@ -13,12 +13,21 @@ const productHeaders = 'id';
 const userHeaders = 'nickname, active_since, age, body_type, athletic_type, city, state, country';
 const reviewHeaders = 'created_at, title, details, fit, rating, what_you_like, what_you_didnt_like, voted_helpful, voted_not_helpful, inappropriate, user_id, product_id';
 
-const conn = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
+const config = {
   database: 'lululemon',
-});
+  user: 'root',
+  password: 'lulupass',
+  port: 3306,
+  host: 'lululemon.cq3rpcxev3es.us-west-1.rds.amazonaws.com',
+};
 
+// const congif = {
+//   host: 'localhost',
+//   user: 'root',
+//   database: 'lululemon',
+// });
+
+const conn = mysql.createConnection(config);
 conn.connect();
 
 conn.query(`INSERT INTO products (${productHeaders}) VALUES ?`, [productRecords], (err) => {

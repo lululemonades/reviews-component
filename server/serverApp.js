@@ -15,6 +15,7 @@ app.use((req, res, next) => {
   next();
 });
 app.use('/', express.static(path.join(__dirname, '../public')));
+app.use('/:id', express.static(path.join(__dirname, '../public')));
 app.use('/reviews-module', express.static(path.join(__dirname, '../public')));
 // app.use('/reviews-module', (req, res, next) => {
 //   // console.log('req.originalUrl', req.originalUrl);

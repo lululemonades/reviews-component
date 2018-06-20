@@ -1,4 +1,4 @@
 const app = require('./serverApp');
 
-app.listen(3002, () => console.log('Listening on port 3002...'));
+app.listen(8000, () => console.log('Listening on port 3002...'));
 
